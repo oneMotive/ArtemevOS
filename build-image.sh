@@ -37,7 +37,7 @@ fi
 MOUNT_PATH=/tmp/${SYSTEM_NAME}-build
 BUILD_PATH=${MOUNT_PATH}/subvolume
 SNAP_PATH=${MOUNT_PATH}/${SYSTEM_NAME}-${VERSION}
-BUILD_IMG=/output/${SYSTEM_NAME}-build.img
+BUILD_IMG=./output/${SYSTEM_NAME}-build.img
 
 mkdir -p ${MOUNT_PATH}
 
@@ -73,7 +73,7 @@ fi
 
 # Create CachyOS mirrorlist files
 echo 'Server = https://mirror.cachyos.org/repo/$arch/$repo' > ${BUILD_PATH}/etc/pacman.d/cachyos-mirrorlist
-echo 'Server = https://mirror.cachyos.org/repo/$arch_v3/$repo' > ${BUILD_PATH}/etc/pacman.d/cachyos-v3-mirrorlist
+echo 'Server = https://us.cachyos.org/repo/$arch_v3/$repo' > ${BUILD_PATH}/etc/pacman.d/cachyos-v3-mirrorlist
 echo 'Server = https://mirror.cachyos.org/repo/$arch_v4/$repo' > ${BUILD_PATH}/etc/pacman.d/cachyos-v4-mirrorlist
 
 # chroot into target
